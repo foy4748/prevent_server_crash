@@ -11,7 +11,6 @@ const PORT = process.env.PORT || 5000;
 const baseURL = `http://localhost:${PORT}`
 const axiosClient = axios.create({
 	baseURL,
-	timeout: 1000,
 	headers: {"content-type": "application/json"}
 });
 

@@ -33,6 +33,7 @@ async function run() {
 		app.get("/users", async (_, res) => {
 			const foundUsers = await usersCollection.find({}).toArray();
 			return res.send(foundUsers);
+
 		})
 
 		// GET a particular users
@@ -41,6 +42,7 @@ async function run() {
 			const query = {_id: new ObjectId(id)}
 			const foundUser = await usersCollection.findOne(query);
 			return res.send(foundUser);
+
 
 		})
 
